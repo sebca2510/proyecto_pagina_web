@@ -1,0 +1,383 @@
+/*
+Paleta de colores
+#000000
+#0000ff
+#7d95da
+#ffffff
+#0b2f99
+*/
+/*----------------El objetivo de los comentarios es que todos entendamos los cambios
+ que estamos haciendo en la entrega final quitamos todos los comentarios---------------*/
+
+/* Eliminar márgenes y rellenos de todos los elementos */
+*/ {
+    margin: 0;               /* Eliminar márgenes de todos los elementos */
+    padding: 0;              /* Eliminar rellenos de todos los elementos */
+    box-sizing: border-box;  /* Ajusta el tamaño de la caja según el ancho y alto, incluyendo el padding y el borde */
+}
+
+/* Estilo del body */
+body {
+    position: relative;      /* Configuración de posición relativa del body */
+    top: 0;                  /* Posición superior del body */
+    font-family: "Roboto", sans-serif; /* Tipo de letra del body */
+    font-size: 14px;         /* Tamaño de fuente del body */
+}
+
+/***-----------------------------Header---------------------------- ***/
+/* Estilo del encabezado */
+.header {
+    position: sticky;        /* El header se mantiene fijo en la parte superior al hacer scroll */
+    top: 0;                  /* Posición superior del header */
+    left: 0;                 /* Posición izquierda del header */
+    width: 100%;             /* El header ocupa todo el ancho de la ventana */
+    background-color: #ffffff; /* Color de fondo del header */
+    box-shadow: 0px 0px 5px #0000ff; /* Sombra del header */
+}
+
+/* Contenedor del header */
+.header .container {
+    background-color: #ffffff; /* Color de fondo del contenedor */
+    width: 100%;              /* El contenedor ocupa el 100% del ancho */
+    height: auto;            /* Altura automática del contenedor */
+    display: flex;           /* Uso de Flexbox para el contenedor */
+    flex-direction: row;     /* Los elementos hijos se alinean en una fila */
+    align-items: center;     /* Los elementos hijos se alinean verticalmente al centro */
+}
+
+/* Estilo del menú dentro del header */
+.header .menu {
+    text-align: center;      /* Alinear el texto del menú al centro */
+    padding: 0.4%;           /* Espaciado interno del menú */
+    flex-grow: 5;            /* El menú crece para ocupar más espacio disponible */
+}
+
+/* Estilo del buscador dentro del header */
+.header .buscador {
+    text-align: center;      /* Alinear el texto del buscador al centro */
+    padding: 0.4%;           /* Espaciado interno del buscador */
+    flex-grow: 1;            /* El buscador crece para ocupar espacio disponible */
+    list-style: none;        /* Eliminar viñetas de la lista del buscador */
+}
+
+.buscarOculto{
+    padding: 0; /* Sin relleno */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al enfocar */
+    transition: all 0.5s linear; /* Transición suave de todas las propiedades durante 0.5 segundos */
+}
+
+.buscarVisible{
+    width: auto; /* Ancho automático, ajustándose al contenido */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al enfocar */
+    margin-right: 10px; /* Margen derecho de 10px */
+    border-radius: 8%; /* Bordes redondeados con un radio del 8% */
+    padding: 10px; /* Relleno interno de 10px */
+    transition: all 0.5s linear; /* Transición suave de todas las propiedades durante 0.5 segundos */
+}
+
+/*** logo ***/
+/* Estilo del logo en el encabezado */
+.logo img {
+    text-align: left;        /* Alinear el texto a la izquierda */
+    margin-top: 3px;         /* Margen superior */
+    margin-left: 10px;       /* Margen izquierdo */
+    display: flex;           /* Usar flexbox */
+    width: 100px;            /* Ancho de la imagen del logo */
+    height: auto;            /* Altura automática de la imagen del logo */
+}
+
+/* Estilo general de las imágenes */
+img {
+    width: 200px;            /* Ancho de 200px */
+    height: 200px;           /* Altura de 200px */
+    border-radius: 50%;      /* Bordes redondeados al 50% */
+    object-fit: cover;       /* Ajusta la imagen para que se vea completa */
+}
+
+/* Estilo de los elementos de la lista del menú */
+.item > li {
+    display: inline-block;   /* Los elementos de la lista se muestran en línea */
+    padding: 0% 1%;          /* Espaciado interno lateral de los elementos de la lista */
+    list-style: none;        /* Eliminar viñetas de los elementos de la lista */
+    font-size: 16px;         /* Tamaño de fuente de los elementos de la lista */
+}
+
+/* Estilo de los enlaces dentro de los elementos de la lista */
+.item > li a {
+    color: #000000;          /* Color del texto de los enlaces */
+    text-decoration-line: none; /* Eliminar subrayado de los enlaces */
+}
+
+/* Estilo de los elementos de la lista al pasar el cursor */
+.item > li :hover {
+    color: #0000ff;             /* Color del texto al pasar el cursor */
+    font-size: 18px;         /* Tamaño de fuente al pasar el cursor */
+    text-shadow: #0000ff 0px 0px; /* Sombra del texto al pasar el cursor */
+}
+
+
+
+/*--------------------- Estilo del contenido principal ------------------*/
+.contenido {
+    padding: 6em;                 /* Relleno de 6em */
+    background-repeat: no-repeat; /* Evitar que el fondo se repita */
+    background-size: cover;       /* Ajusta el tamaño del fondo para cubrir el área */
+    background-attachment: fixed; /* Fondo fijo al hacer scroll */
+    background-position: center;  /* Centrar el fondo */
+    background-image: linear-gradient(80deg,#eef0d8da 20%, #b097f5ec 80%), url(../img/logo\ syncrosmart.png); /* Imagen de fondo con degradado */
+}
+
+/* Estilo de los encabezados h1 dentro del contenido */
+.contenido h1 {
+    color: #0000ff;       /* Color del texto azul */
+    width: 50%;             /* Ancho del 50% */
+    padding: none;          /* Sin relleno */
+    font-size: 50px;        /* Tamaño de fuente de 50px */
+    font-weight: 600;       /* Peso de fuente 600 (negrita) */
+
+}
+
+/* Estilo de los encabezados h2 */
+.contenido .subTitle {
+    color: #0000ff;       /* Color del texto azul */
+    width: 60%;             /* Ancho del 50% */
+    padding: none;          /* Sin relleno */
+    font-size: 20px;        /* Tamaño de fuente de 50px */
+    font-weight: 600;       /* Peso de fuente 600 (negrita) */
+    
+}
+
+
+/* Estilo de los elementos <hr> */
+.contenido hr {
+    border: none;            /* Elimina el estilo predeterminado del hr */
+    width: 100%;             /* Cubre todo el padding del contenido */
+    height: 0.3px;           /* Altura de la línea */
+    background-color: #0000ff;  /* Color de la línea */
+    box-shadow: 0px 0px 1px #0000ff; /* Sombra del contenido */
+}
+
+/*---------------Estilo de los productos---------------*/
+.producto {
+    border: 1px #0000ff;  /* Borde de 1px  y color azul */
+    padding: 1em;            /* Relleno de 1em */
+    width: 28%;              /* Ancho del producto */
+    display: inline-block;   /* Mostrar el producto en línea */
+    vertical-align: top;     /* Alinear verticalmente al tope */
+    margin: 0 1%;            /* Margen lateral de 1% */
+    height: 400px;           /* Fija la altura de cada elemento */
+    text-align: center;      /* Centrar texto horizontalmente */
+    box-shadow: 0px 0px 5px #0000ff; /* Sombra del contenido */
+}
+
+/* Estilo de la imagen dentro de los productos */
+.producto .img {
+    margin: 0 auto;          /* Centrar imagen horizontalmente */
+    width: 100%;             /* Ocupar todo el ancho del contenedor */
+    height: 150px;           /* Fija la altura de la imagen */
+    object-fit: cover;       /* Ajusta la imagen para que se vea completa */
+}
+
+/* Estilo de las listas dentro de los productos */
+.producto ul {
+    list-style: none;        /* Elimina los puntos de la lista */
+    padding: 0;              /* Elimina el padding de la lista */
+    margin: 0;               /* Elimina el margen de la lista */
+    text-align: center;      /* Centrar texto horizontalmente */
+}
+
+/* Estilo de los enlaces dentro de las listas de productos */
+.producto li a {
+    display: inline-block;   /* Muestra los elementos de la lista en línea */
+    margin: 0 10px;          /* Agrega un margen lateral a cada elemento de la lista */
+}
+
+/**Estilo de los botones arriba **/
+.up{
+    width: 10%; /* Ancho del botón */
+    display: inline; /* Mostrar el botón en línea */
+    margin: 0.5%; /* Margen alrededor del botón */
+    padding: 1% ; /* Relleno dentro del botón */
+    background-color: #ccd8fd; /* Color de fondo del botón */
+    border: 1px solid #0b2f99; /* Borde del botón */
+    border-radius: 5%; /* Bordes redondeados del botón */
+    color: #0b2f99; /* Color del texto del botón */
+    font-size: 1em; /* Tamaño de fuente del texto del botón */
+    font-weight: 500; /* Grosor de la fuente del texto del botón */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el botón */
+}
+
+.up:hover{
+    background-color: #b097f5ec; /* Color de fondo del botón */
+    border: 1px solid #4413caec; /* Borde del botón */
+    color: #ffff; /* Color del texto del botón */
+    font-size: 1em; /* Tamaño de fuente del texto del botón */
+    font-weight: 600; /* Grosor de la fuente del texto del botón */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre el botón */  
+}
+
+
+
+/***----------------formulario---------------------***/
+
+.form{
+    width: 70%; /* Ancho del formulario */
+    height: auto; /* Altura automática del formulario */
+    padding: 2%; /* Relleno dentro del formulario */
+    text-align: center; /* Alinear el texto al centro */
+    border: 1px solid #7d95da; /* Borde del formulario */
+}
+.form * {
+    display:inline-block; /* Mostrar los elementos en línea y como bloques */
+    width: 80%; /* Ancho de los elementos del formulario */
+    margin: 1% 0%; /* Margen superior e inferior de los elementos del formulario */
+    font-size: 20px; /* Tamaño de fuente de los elementos del formulario */
+}
+.form > input{
+    padding: 1% 1.5%; /* Relleno dentro de los campos de entrada */
+    background-color: #adbeff52; /* Color de fondo de los campos de entrada */
+    border: none; /* Sin borde para los campos de entrada */
+    border-bottom: 1px solid #7d95da ; /* Borde inferior de los campos de entrada */
+    outline: none; /* Sin contorno al enfocar los campos de entrada */
+}
+.form > label{
+    text-align: left; /* Alinear el texto a la izquierda */
+    padding: 1.5%; /* Relleno dentro de las etiquetas */
+}
+/* Acomodar el iframe al lado del formulario */
+.elemets_contac {
+    border: 1px #0000ff;  /* Borde de 1px  y color azul */
+    padding: 1em;            /* Relleno de 1em */
+    width: 90%;              /* Ancho del producto */
+    display: inline-block;   /* Mostrar el producto en línea */
+    vertical-align: top;     /* Alinear verticalmente al tope */
+    margin: 0 2%;            /* Margen lateral de 2% */
+    
+}
+.elemets_contac > .form {
+    width: 40%; /* El formulario ocupa el 40% del ancho del contenedor */
+    display: inline-block; /* El formulario se muestra como un bloque en línea */
+    vertical-align: top; /* Alinea verticalmente la parte superior del formulario */
+    margin: 0 2%; /* Margen lateral de 2% a ambos lados del formulario */
+}
+
+.elemets_contac > iframe {
+    display: inline-block; /* El iframe se muestra como un bloque en línea */
+    width: 50%; /* El iframe ocupa el 50% del ancho del contenedor */
+    height: 515px; /* Altura fija del iframe */
+    border: 0; /* Sin borde alrededor del iframe */
+    vertical-align: top; /* Alinea verticalmente la parte superior del iframe */
+}
+
+
+.labelPolitica{
+    width: 40%; /* Ancho de la etiqueta de política */
+    display:inline-block ; /* Mostrar la etiqueta en línea y como bloque */
+}
+
+/*-----Checkbox-----*/
+input[type="checkbox"]{
+    visibility: hidden; /* Ocultar el checkbox */
+}
+.check{
+    display: inline-block; /* Mostrar el checkbox en línea y como bloque */
+    position: relative; /* Posición relativa del checkbox */
+    margin: 3%; /* Margen alrededor del checkbox */
+    width: 24%; /* Ancho del checkbox */
+    height: 40px; /* Altura del checkbox */
+    background-color: #7d95da; /* Color de fondo del checkbox */
+    border-radius: 10px; /* Bordes redondeados del checkbox */
+}
+.check label{
+    /*Aspecto*/
+    display: block; /* Mostrar la etiqueta como bloque */
+    width: 40%; /* Ancho de la etiqueta */
+    height: 70%; /* Altura de la etiqueta */
+    border-radius: 17px; /* Bordes redondeados de la etiqueta */
+    box-shadow: 0px 2px 5px 0px black; /* Sombra de la etiqueta */
+    background: #868686; /* Color de fondo de la etiqueta */
+    background: linear-gradient(to top, #746666 3%, #868686  40%, #7a6c6c); /* Degradado de fondo de la etiqueta */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre la etiqueta */
+
+    /**Posicion**/
+    position: absolute; /* Posición absoluta de la etiqueta */
+    top: 5%; /* Posición superior de la etiqueta */
+    left: 5px; /* Posición izquierda de la etiqueta */
+    z-index: 1; /* Orden de vista en el eje Z */
+    /**coportamiento**/
+    transition: all 1.5s ease; /* Transición suave para todos los cambios */
+}
+.check input[type="checkbox"]:checked + label {
+    left: auto; /* Posición izquierda automática al estar seleccionado */
+    right: 8px; /* Posición derecha de la etiqueta al estar seleccionado */
+}
+.check:after{
+    content: 'NO'; /* Contenido del pseudo-elemento 'after' */
+    font: 14px/30px Arial, sans-serif; /* Fuente del texto 'NO' */
+    color: #ccd8fd; /* Color del texto 'NO' */
+    margin: 2%; /* Margen alrededor del texto 'NO' */
+    position: absolute; /* Posición absoluta del texto 'NO' */
+    right: 10px; /* Posición derecha del texto 'NO' */
+    top: 3px; /* Posición superior del texto 'NO' */
+    z-index: 0; /* Orden de vista en el eje Z */
+    font-weight: bold; /* Grosor de la fuente del texto 'NO' */
+}
+.check:before{
+    content: 'SI'; /* Contenido del pseudo-elemento 'before' */
+    font: 14px/30px Arial, sans-serif; /* Fuente del texto 'SI' */
+    color: #ccd8fd; /* Color del texto 'SI' */
+    margin: 2%; /* Margen alrededor del texto 'SI' */
+    position: absolute; /* Posición absoluta del texto 'SI' */
+    left: 10px; /* Posición izquierda del texto 'SI' */
+    top: 3px; /* Posición superior del texto 'SI' */
+    z-index: 0; /* Orden de vista en el eje Z */
+    font-weight: bold; /* Grosor de la fuente del texto 'SI' */
+}
+.button_send, .button_clear{
+    width: 30%; /* Ancho de los botones de envío y limpiar */
+    display: inline; /* Mostrar los botones en línea */
+    margin: 2%; /* Margen alrededor de los botones */
+    padding: 4%; /* Relleno dentro de los botones */
+    background-color: #ccd8fd; /* Color de fondo de los botones */
+    border: 1px solid #0b2f99; /* Borde de los botones */
+    border-radius: 5%; /* Bordes redondeados de los botones */
+    color: #0b2f99; /* Color del texto de los botones */
+    font-size: 1em; /* Tamaño de fuente del texto de los botones */
+    font-weight: 500; /* Grosor de la fuente del texto de los botones */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar sobre los botones */
+}
+
+/***----------------lista de proveedores---------------------***/
+.table {
+    width: 50%;
+    border-collapse: collapse;
+    padding: 1em;            /* Relleno de 1em */
+    display: block;          /* Cambiar a bloque para usar margin auto */
+    margin: 0 auto;          /* Centralizar la tabla */
+    height: auto;            /* Fija la altura de cada elemento */
+    text-align: center;      /* Centrar texto horizontalmente */
+    box-shadow: 0px 0px 5px #0000ff; /* Sombra del contenido */
+}
+
+.table th, .table td {
+    border: 0.5px solid #0b2f9979;  /* Bordes internos de 1px y color azul */
+    padding: 0.1em;             /* Relleno de 0.5em para las celdas */
+    box-shadow: 0px 0px 1px #0000ff; /* Sombra del contenido */
+}
+/***----------------footer---------------------***/
+footer {
+    background-color: #ffffff; /* Color de fondo blanco */
+    color: #0000ff; /* Color del texto azul */
+    box-shadow: 0px 0px 5px #0000ff; /* Sombra del pie de página */
+    flex-grow: 5; /* El pie de página crece para ocupar más espacio disponible */
+    text-align: center; /* Alinear el texto al centro */
+    padding: 0.1%; /* Espaciado interno superior e inferior */
+}
+
+
+
+
+
+
